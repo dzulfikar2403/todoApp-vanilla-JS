@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#main-list::-webkit-scrollbar {
+  display: none;
+}
+
+li #text::-webkit-scrollbar {
+  display: none;
+}
+
+li{
+  @apply m-2 bg-white p-2 rounded-2xl relative ring-1 ring-cyan-800
+}
+
+li #text{
+  @apply px-4 py-2 font-mono relative overflow-x-scroll cursor-pointer w-[88%] outline-none selection:bg-none 
+}
+
+li label{
+  /* content: ''; */
+  width: 5px;
+  height: 5px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: absolute;
+  z-index: 2;
+  left: 6px;
+  top: 40%;
+}
+
+li label.activated{
+  border: none;
+  background: rgb(7, 129, 7);
+}
+
+li #text.checked{
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+li div span#singleRemove{
+  @apply absolute right-2 top-4 px-1 rounded-2xl  bg-orange-200 cursor-pointer
+}
+
+li div span#edit{
+  @apply absolute right-8 top-4 rounded-2xl  bg-[#eaeaea] cursor-pointer
+}
+
+li div{
+  @apply bg-sky-950 h-full absolute w-16 rounded-r-2xl rounded-tl-3xl top-0 right-0 
+}
+
+.alertShow{
+  @apply scale-100 
+}
+
+
