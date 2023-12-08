@@ -16,7 +16,7 @@ li{
 }
 
 li #text{
-  @apply px-4 py-2 font-mono relative overflow-x-scroll cursor-pointer w-[88%] outline-none selection:bg-none 
+  @apply px-4 py-2 font-mono relative overflow-x-scroll cursor-pointer w-[88%] outline-none selection:bg-slate-300; 
 }
 
 li label{

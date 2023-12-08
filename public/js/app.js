@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   let inputValue = document.getElementById("inputText");
   let removeAll = document.getElementById("removeAll");
   let UlMainList = document.getElementById("main-list");
@@ -16,19 +16,26 @@ window.addEventListener("load", () => {
   });
 
   window.addEventListener("click", (e, i) => {
-    if (e.target.id === "singleRemoveClick") e.target.parentElement.parentElement.parentElement.remove();
+    if (e.target.id === "singleRemoveClick") {
+      e.target.parentElement.parentElement.parentElement.remove();
+      setData();
+    }
     if (e.target.id === "editClick") {
+
+      let singleTextInput = e.target.parentElement.parentElement.previousElementSibling;
       if(e.target.textContent === '✏️'){
         // e.target.parentElement.parentElement.previousElementSibling = inputNew
-        e.target.parentElement.parentElement.previousElementSibling.removeAttribute("readonly");
-        e.target.parentElement.parentElement.previousElementSibling.focus();
+        singleTextInput.removeAttribute("readonly");
+        singleTextInput.focus();
         e.target.textContent = '✔️';
       }else{
-        e.target.parentElement.parentElement.previousElementSibling.setAttribute("readonly","readonly");
-        e.target.parentElement.parentElement.previousElementSibling.blur();
+        singleTextInput.setAttribute("readonly","readonly");
+        singleTextInput.blur();
         e.target.textContent = '✏️';
+
+        singleTextInput.setAttribute("value", singleTextInput.value);
       }
-      setData();
+      setData(); //set localStorage
     }
 
     if (e.target.id === "addValue") mainFunc();
@@ -56,7 +63,7 @@ window.addEventListener("load", () => {
       spanEdit = document.createElement("span");
       spanRemove = document.createElement("span");
 
-      inputNew.value = inputValue.value;
+      inputNew.setAttribute('value', inputValue.value);
       spanEdit.innerHTML = '<p id="editClick">✏️</p>';
       spanRemove.innerHTML = '<i id="singleRemoveClick" class="fa-solid fa-trash" style="color: #ed7707;"></i>';
       spanRemove.setAttribute("id", "singleRemove");
@@ -90,7 +97,7 @@ window.addEventListener("load", () => {
   }
 
     // buat localstorage setData for parent LI
-    let setData = () => {
-      localStorage.setItem("keyUl", UlMainList.innerHTML);
-    };
+  let setData = () => {
+    localStorage.setItem("keyUl", UlMainList.innerHTML);
+  };
 });
