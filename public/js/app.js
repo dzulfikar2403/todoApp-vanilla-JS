@@ -52,7 +52,6 @@ window.addEventListener("DOMContentLoaded", () => {
         
         //ambil nilai dulu, baru hapus isi input dari changeValue
         newVal.textContent = ChangeValue.value;
-        ChangeValue.value = '';
 
         setData(); //set localStorage
       });
