@@ -12,14 +12,14 @@ li #text::-webkit-scrollbar {
 }
 
 li{
-  @apply m-2 bg-white p-2 rounded-2xl relative ring-1 ring-cyan-800
+  @apply m-2 bg-white p-2 rounded-2xl relative ring-1 ring-cyan-800 cursor-pointer
 }
 
 li #text{
-  @apply px-4 py-2 font-mono relative overflow-x-scroll cursor-pointer w-[88%] outline-none selection:bg-none 
+  @apply px-4 py-2 font-mono relative overflow-x-scroll cursor-pointer outline-none selection:bg-none 
 }
 
-li label{
+li p{
   /* content: ''; */
   width: 5px;
   height: 5px;
@@ -32,7 +32,7 @@ li label{
   top: 40%;
 }
 
-li label.activated{
+li p.activated{
   border: none;
   background: rgb(7, 129, 7);
 }
@@ -43,19 +43,25 @@ li #text.checked{
 }
 
 li div span#singleRemove{
-  @apply absolute right-2 top-4 px-1 rounded-2xl  bg-orange-200 cursor-pointer
+  @apply absolute right-1 top-2 px-1 rounded-2xl  bg-orange-200 cursor-pointer
 }
 
 li div span#edit{
-  @apply absolute right-8 top-4 rounded-2xl  bg-[#eaeaea] cursor-pointer
+  @apply absolute right-8 top-2 rounded-2xl  bg-[#eaeaea] cursor-pointer
 }
 
 li div{
-  @apply bg-sky-950 h-full absolute w-16 rounded-r-2xl rounded-tl-3xl top-0 right-0 
+  @apply bg-sky-950 h-full absolute w-16 cursor-default rounded-r-2xl rounded-tl-3xl top-0 right-0 
 }
 
 .alertShow{
   @apply scale-100 
 }
+
+.editShow{
+  @apply scale-100 
+}
+
+
 
 

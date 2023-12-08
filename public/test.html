@@ -1,0 +1,39 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembuatan Input Dinamis</title>
+</head>
+<body>
+  <input type="text" id="inputValue" placeholder="Ketik sesuatu...">
+  <button id="clickBtn">Buat Input Baru</button>
+  <div id="newInputsContainer"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var inputValue = document.getElementById('inputValue');
+      var clickBtn = document.getElementById('clickBtn');
+      var newInputsContainer = document.getElementById('newInputsContainer');
+
+      function buatInputBaru() {
+        var newInput = document.createElement('input');
+        newInput.type = 'text';
+        newInput.className = 'newInput';
+        newInput.placeholder = 'Input Baru';
+        newInputsContainer.appendChild(newInput);
+
+        var tombolEdit = document.createElement('button');
+        tombolEdit.textContent = 'Edit';
+        tombolEdit.addEventListener('click', function () {
+          // Mengambil nilai dari newInput yang sesuai
+          alert(newInput.value);
+        });
+        newInputsContainer.appendChild(tombolEdit);
+      }
+
+      clickBtn.addEventListener('click', buatInputBaru);
+    });
+  </script>
+</body>
+</html> -->

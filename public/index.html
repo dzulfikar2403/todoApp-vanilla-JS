@@ -13,7 +13,7 @@
   <div class="w-full h-[100vh] bg-gradient-to-tr from-[#4D4C7D] via-[#232D3F] to-[#363062] flex justify-center items-center">
       <div class="px-4 py-2 w-[450px] bg-[#072541] rounded-lg">
         <div class="flex items-center">
-          <Label class="font-mono text-[#fff] font-semibold text-3xl">Todo<span class="text-[#008170]">App</span>.</Label>
+          <h1 class="font-mono text-[#fff] font-semibold text-3xl">Todo<span class="text-[#008170]">App</span>.</h1>
           <span class="w-10"><img src="img/todo__1_-removebg-preview.png" alt=""></span>
         </div>
         <div class="py-3">
@@ -25,16 +25,29 @@
           <div class="mt-2"><button id="removeAll" class="px-4 py-1 bg-rose-200 rounded-full text-rose-700 font-semibold">Delete All</button></div>
         </div>
         <ul id="main-list" class="p-1 leading-relaxed max-h-60 overflow-y-scroll">
-          <!-- <li><label for="text" class="activated"></label><input type="text" id="text" readonly value="Hello worldworldworldworldworldworldworldworldworldworld" class="checked"><div><span id="edit"><i class="fa-solid fa-newspaper" style="color: #0284c7;"></i></span><span id="singleRemove"><i class="fa-solid fa-trash" style="color: #ed7707;"></i></span></div></li> -->
+          <!-- <li><label for="text"></label><input id="text" value="halo" readonly="readonly"><div><span id="edit"><p id="editClick">✏️</p></span><span id="singleRemove"><i id="singleRemoveClick" class="fa-solid fa-trash" style="color: #ed7707;"></i></span></div></li> -->
         </ul>
       </div>
     </div>
     
+    <!-- alertShow -->
     <section id="Alert" class="scale-0 transition-all duration-500 absolute z-20 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-full h-[100vh]">
       <div class=" absolute z-30 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] shadow-xl bg-[#eaeaea] p-6 w-[300px] rounded-lg">
-        <h1 class="text-center pb-2 text-semibold text-slate-800 text-xl font-mono selection:bg-orange-700 selection:text-orange-400">Isi Task dahulu bro!</h1>
+        <h1 class="text-center pb-2 text-semibold text-slate-800 text-xl font-mono selection:bg-orange-700 selection:text-orange-400">Isi Task dulu bro!</h1>
         <div class="flex justify-end mt-2 ">
-          <button id="confirmAlert" class="p-1 bg-gradient-to-r from-blue-900 to-teal-900 text-base font-medium text-[#fff] rounded-2xl m-1 w-16 outline outline-cyan-900">OK!</button>
+          <button id="confirmAlert" class="p-1 bg-gradient-to-r from-blue-900 to-teal-900 text-base font-medium text-[#fff] rounded-2xl m-1 w-16 outline outline-offset-1 outline-cyan-900">OK!</button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ChangeSpanText -->
+    <section id="ChangeSpanText" class="scale-0 transition-all duration-500 absolute z-20 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-full h-[100vh]">
+      <div class=" absolute z-30 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] shadow-xl bg-[#eaeaea] p-6 w-[300px] rounded-lg">
+        <h1 class="text-center pb-2 text-semibold text-slate-800 text-xl font-mono selection:bg-orange-700 selection:text-orange-400">Ganti Tasks?</h1>
+        <div class="py-3 flex justify-center"><input type="text" id="ChangeValue" class="outline-none rounded-lg p-1 font-mono border-b border-t border-cyan-900"></div>
+        <div class="flex justify-between mt-2 ">
+          <button id="cancelChange" class="p-1 bg-gradient-to-tr from-purple-900 to-rose-900 text-base font-medium text-[#fff] rounded-2xl m-1 w-16 outline outline-offset-1 outline-pink-900">Cancel</button>
+          <button id="confirmChange" class="p-1 bg-gradient-to-r from-blue-900 to-teal-900 text-base font-medium text-[#fff] rounded-2xl m-1 w-16 outline outline-offset-1 outline-cyan-900">OK!</button>
         </div>
       </div>
     </section>
