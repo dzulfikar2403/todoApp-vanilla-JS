@@ -903,7 +903,6 @@ li #text::-webkit-scrollbar {
 li {
   position: relative;
   margin: 0.5rem;
-  cursor: pointer;
   border-radius: 1rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -917,6 +916,7 @@ li {
 
 li #text {
   position: relative;
+  width: 88%;
   cursor: pointer;
   overflow-x: scroll;
   padding-left: 1rem;
@@ -944,7 +944,7 @@ li #text::selection {
   background-image: none;
 }
 
-li p{
+li label{
   /* content: ''; */
   width: 5px;
   height: 5px;
@@ -957,7 +957,7 @@ li p{
   top: 40%;
 }
 
-li p.activated{
+li label.activated{
   border: none;
   background: rgb(7, 129, 7);
 }
@@ -969,8 +969,8 @@ li #text.checked{
 
 li div span#singleRemove {
   position: absolute;
-  right: 0.25rem;
-  top: 0.5rem;
+  right: 0.5rem;
+  top: 1rem;
   cursor: pointer;
   border-radius: 1rem;
   --tw-bg-opacity: 1;
@@ -982,7 +982,7 @@ li div span#singleRemove {
 li div span#edit {
   position: absolute;
   right: 2rem;
-  top: 0.5rem;
+  top: 1rem;
   cursor: pointer;
   border-radius: 1rem;
   --tw-bg-opacity: 1;
@@ -995,7 +995,6 @@ li div {
   right: 0px;
   height: 100%;
   width: 4rem;
-  cursor: default;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   border-top-left-radius: 1.5rem;
@@ -1004,12 +1003,6 @@ li div {
 }
 
 .alertShow {
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.editShow {
   --tw-scale-x: 1;
   --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1054,7 +1047,3 @@ li div {
   --tw-text-opacity: 1;
   color: rgb(251 146 60 / var(--tw-text-opacity));
 }
-
-
-
-
