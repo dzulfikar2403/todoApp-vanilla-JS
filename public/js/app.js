@@ -27,10 +27,12 @@ window.addEventListener("DOMContentLoaded", () => {
         // e.target.parentElement.parentElement.previousElementSibling = inputNew
         singleTextInput.removeAttribute("readonly");
         singleTextInput.focus();
+        singleTextInput.classList.add('editStyle');
         e.target.textContent = '✔️';
       }else{
         singleTextInput.setAttribute("readonly","readonly");
         singleTextInput.blur();
+        singleTextInput.classList.remove('editStyle');
         e.target.textContent = '✏️';
 
         singleTextInput.setAttribute("value", singleTextInput.value);

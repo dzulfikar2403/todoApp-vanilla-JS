@@ -47,7 +47,7 @@ li div span#singleRemove{
 }
 
 li div span#edit{
-  @apply absolute right-8 top-4 rounded-2xl  bg-[#eaeaea] cursor-pointer
+  @apply absolute right-8 top-4 rounded-2xl  bg-[#eaeaea] cursor-pointer 
 }
 
 li div{
@@ -56,4 +56,8 @@ li div{
 
 .alertShow{
   @apply scale-100 
+}
+
+.editStyle{
+  @apply translate-x-0 border-b border-b-orange-400 rounded-md transition duration-500 focus:translate-x-2
 }
